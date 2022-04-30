@@ -69,17 +69,24 @@ describe("Unit test for UserService class",()=>{
             })
 
 
+            // Requerimiento 4: pasa la prueba 
+            test("4. Given a list of users give me the list of usernames", () => {
 
-             // Requerimiento 4: pasa la prueba 
-             test("4. Given a list of users give me the list of usernames", () => {
-                const user1 = UserService.create(1, "carlogilmar1", "Carlo")
-                const user2 = UserService.create(1, "carlogilmar2", "Carlo")
-                const user3 = UserService.create(1, "carlogilmar3", "Carlo")
+                const user1 = UserService.create(1,"gabrielletorricelli1","Gabriel Torres Mendoza")
+                const user2 = UserService.create(1,"gabrielletorricelli2","Gabriel Torres Mendoza")
+                const user3 = UserService.create(1,"gabrielletorricelli3","Gabriel Torres Mendoza")
+        
                 const usernames = UserService.getAllUsernames([user1, user2, user3])
-                expect(usernames).toContain("carlogilmar1")
-                expect(usernames).toContain("carlogilmar2")
-                expect(usernames).toContain("carlogilmar3")
-              })
+        
+                expect(usernames).toContain("gabrielletorricelli1")
+                expect(usernames).toContain("gabrielletorricelli2")
+                expect(usernames).toContain("gabrielletorricelli3")
+        
+            })
+
+
+
+   
 
 
 })

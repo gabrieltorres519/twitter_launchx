@@ -75,19 +75,19 @@ describe("Unit tests for User class", () => {
                 /**Requerimiento 4: Cada objeto necesita los siguientes setters: `setUsername` y `setBio`, para actualizar dichas propiedades. */
 
               
-                //     test("4) Add setters",()=>{
-                //         //Aquí el código que se usará en la app
-                //         const user = new User(1,"gabrielletorricelli","Gabriel Torres Mendoza","Bio")
+                    test("4) Add setters",()=>{
+                        //Aquí el código que se usará en la app
+                        const user = new User(1,"gabrielletorricelli","Gabriel Torres Mendoza","Bio")
                         
                         
-                //         user.setUsername = "Gilmar"
-                //         expect(user.username).toBe("Gilmar")
+                        user.setUsername = "Gilmar"
+                        expect(user.username).toBe("Gilmar")
 
 
-                //         user.setBio = "New bio"
-                //         expect(user.bio).toBe("New bio")
+                        user.setBio = "New bio"
+                        expect(user.bio).toBe("New bio")
                     
-                //     })
+                    })
               
 })
 
