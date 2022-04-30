@@ -94,7 +94,7 @@ Criterios de aceptación:
 
 2. El valor de `bio` deberá ser por default para todos los `user` creados. */
 
-const UserService = require("../app/services/UserService");
+const UserService = require("../../app/services/UserService");
 
 
 // describe("Unit test for UserService class",()=>{
@@ -130,4 +130,15 @@ const UserService = require("../app/services/UserService");
 
         
     })
+})
+
+
+// Requerimiento 3: pasa la prueba 
+
+test("3. Update username", () => {
+    const user = UserService.create(1, "gabrielletorricelli", "Gabriel Torres Mendoza")
+
+    UserService.updateUserUsername(user, "gabo")
+
+    expect(user.username).toBe("gabo")
 })
