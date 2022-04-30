@@ -44,16 +44,36 @@ const User = require("../app/user");
 
 /**Requerimiento 3: Cada objeto tipo user necesita los siguietes gettes: `getUsername`, `getBio`, `getDateCreated`, `getLastUpdated`. */
 
+// describe("Unit tests for User class",()=>{
+//     test("3) Add getters",()=>{
+//         //aquí el codigo que se usará en la app
+//         const user = new User(1,"gabrielletorricelli","Gabriel Torres Mendoza","Bio")
+
+
+//         //Validaciones de los resultados del código
+//          expect(user.getUsername).toBe("gabrielletorricelli")
+//          expect(user.getBio).toBe("Bio")
+//          expect(user.getDateCreated).not.toBeUndefined()
+//          expect(user.getLastUpdated).not.toBeUndefined()
+//     })
+// })
+
+
+
+/**Requerimiento 4: Cada objeto necesita los siguientes setters: `setUsername` y `setBio`, para actualizar dichas propiedades. */
+
 describe("Unit tests for User class",()=>{
-    test("3) Add getters",()=>{
-        //aquí el codigo que se usará en la app
+    test("4) Add setters",()=>{
+        //Aquí el código que se usará en la app
         const user = new User(1,"gabrielletorricelli","Gabriel Torres Mendoza","Bio")
+        
+        
+        user.setUsername = "Gilmar"
+        expect(user.username).toBe("Gilmar")
 
 
-        //Validaciones de los resultados del código
-         expect(user.getUsername).toBe("gabrielletorricelli")
-         expect(user.getBio).toBe("Bio")
-         expect(user.getDateCreated).not.toBeUndefined()
-         expect(user.getLastUpdated).not.toBeUndefined()
+        user.setBio = "New bio"
+        expect(user.bio).toBe("New bio")
+    
     })
 })
