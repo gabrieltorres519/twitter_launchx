@@ -1,6 +1,7 @@
 /** Requerimiento 1: Se necesita un modelo `User` para guardar la información de un usuario de nuestra app: 
  * `id`, `username`, `name`, `bio`, `dateCreated` y `lastUpdated`. 
  */
+ const User = require("../app/user");
 
 describe("Unit tests for User class", () => {
     test("1) Create an User object", () => {
