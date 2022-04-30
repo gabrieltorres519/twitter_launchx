@@ -16,6 +16,12 @@ class UserService{
     static updateUserUsername(user, username){
         user.setUsername = username //Forma correcta de llamar a un setter
     }
+
+
+    static getAllUsernames(users){
+        const usersUsernames = users.map( user => user.username)
+        return usersUsernames
+    }
 }
 
 module.exports = UserService
