@@ -13,6 +13,11 @@ class UserService{
     //     user.setUsername(newUsername)  // Forma incorrecta de usar un 
     // }
 
+    static updateBio(user, bio){
+        user.setBio = bio
+    }
+    
+
     static updateUserUsername(user, username){
         user.setUsername = username //Forma correcta de llamar a un setter
     }
