@@ -4,7 +4,7 @@
 /** Requerimiento 1: Se necesita un modelo `User` para guardar la información de un usuario de nuestra app: 
  * `id`, `username`, `name`, `bio`, `dateCreated` y `lastUpdated`. 
  */
-const User = require("../app/user");
+// const User = require("../app/user");
 
 // describe("Unit tests for User class", () => {
 //     test("1) Create an User object", () => {
@@ -65,21 +65,21 @@ const User = require("../app/user");
 
 /**Requerimiento 4: Cada objeto necesita los siguientes setters: `setUsername` y `setBio`, para actualizar dichas propiedades. */
 
-describe("Unit tests for User class",()=>{
-    test("4) Add setters",()=>{
-        //Aquí el código que se usará en la app
-        const user = new User(1,"gabrielletorricelli","Gabriel Torres Mendoza","Bio")
+// describe("Unit tests for User class",()=>{
+//     test("4) Add setters",()=>{
+//         //Aquí el código que se usará en la app
+//         const user = new User(1,"gabrielletorricelli","Gabriel Torres Mendoza","Bio")
         
         
-        user.setUsername = "Gilmar"
-        expect(user.username).toBe("Gilmar")
+//         user.setUsername = "Gilmar"
+//         expect(user.username).toBe("Gilmar")
 
 
-        user.setBio = "New bio"
-        expect(user.bio).toBe("New bio")
+//         user.setBio = "New bio"
+//         expect(user.bio).toBe("New bio")
     
-    })
-})
+//     })
+// })
 
 
 
@@ -121,7 +121,7 @@ const UserService = require("../app/services/UserService");
     test("2) Get all userdata in a list",()=>{
 
         const user = UserService.create(1,"gabrielletorricelli","Gabriel Torres Mendoza")
-        const userInfoInList = UserService.getInfo(user)
+        const userInfoInList = UserService.getInfo(user) // En userservice.js se cambió a static
 
         expect(userInfoInList[0]).toBe(1)
         expect(userInfoInList[1]).toBe("gabrielletorricelli")
