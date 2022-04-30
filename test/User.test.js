@@ -1,3 +1,6 @@
+
+//Sprint 1
+
 /** Requerimiento 1: Se necesita un modelo `User` para guardar la información de un usuario de nuestra app: 
  * `id`, `username`, `name`, `bio`, `dateCreated` y `lastUpdated`. 
  */
@@ -75,5 +78,34 @@ describe("Unit tests for User class",()=>{
         user.setBio = "New bio"
         expect(user.bio).toBe("New bio")
     
+    })
+})
+
+
+
+//Sprint 2
+
+/**Requerimiento 1: Crear un nuevo usuario con lo ya definido en el sprint anterior, usando una nueva clase llamada `UserService`.
+ * 
+Criterios de aceptación:
+
+1. Esta clase deberá tener un método `create` que se pueda usar sin instanciar (static method), y que reciba solo los parámetros del `id`, 
+`username` y `name`. 
+
+2. El valor de `bio` deberá ser por default para todos los `user` creados. */
+
+const UserService = require("../app/services/UserService");
+
+
+describe("Unit test for UserService class",()=>{
+    test("1) Create a new user using UserService",()=>{
+
+        const user = UserService.create(1,"gabrielletorricelli","Gabriel Torres Mendoza")
+
+
+        expect(user.username).toBe("gabrielletorricelli")
+        expect(user.name).toBe("Gabriel Torres Mendoza")
+        expect(user.id).toBe("1")
+        expect(user.bio).not.toBeUndefined()
     })
 })
